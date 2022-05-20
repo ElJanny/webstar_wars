@@ -1,0 +1,19 @@
+<section>
+
+  <h1>webstar</h1>
+  <h2>frontend</h2>
+  <form [formGroup]="profileForm">
+
+
+      <label>Felhasználónév</label>
+      <input type="text"  formControlName="username">
+
+
+
+      <label>Jelszó</label>
+      <input type = "password"  formControlName="password">
+
+    <button mat-raised-button color="primary" type="button" (click)="login()">Belépés</button>
+  </form>
+
+</section>
