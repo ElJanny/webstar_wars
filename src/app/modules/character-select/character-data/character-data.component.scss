@@ -1,0 +1,101 @@
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+h1{
+  font-family: 'poppinsBlack';
+  font-size: 24px;
+  margin: 0 0 1.25rem 0
+}
+
+button{
+  font-size: 16px;
+  font-family: 'poppinsBold';
+  border: 3px solid var(--color-orange);
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
+  margin: 1.75rem 0 1.75rem 0;
+}
+
+.mini-container{
+  font-size: 20px;
+  font-family: 'poppinsBlack';
+  margin: 1rem 0 1.5rem 0;
+  display: flex;
+
+  div{
+    display:flex;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+}
+
+span{
+  font-family: 'poppinsBold';
+  font-size: 16px;
+  color: var(--color-orange);;
+  text-transform: uppercase;
+}
+
+.name{
+height: fit-content;
+display:block;
+justify-content: space-between;
+h2{
+  font-family: 'starjedi';
+  font-size: 90px;
+  height: auto;
+  line-height: 5rem;
+  overflow-wrap: break-word;
+}
+}
+
+h3{
+  text-transform: uppercase;
+  font-family: 'poppinsBold';
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+p{
+  line-height: 1.4rem;
+  font-family: 'poppinsRegular';
+  font-size: 16px;
+}
+
+.square{
+ width: 2rem;
+ height: 2rem;
+ border: 8px solid var(--color-white);
+}
+
+.square-star{
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-orange);
+  background-image: url('./../../../../assets/icons/star/star.svg');
+  background-repeat: no-repeat;
+  background-size:auto;
+  border: 8px solid var(--color-orange);
+  font-size: 50%;
+
+ }
+
+ .mini-square{
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color-orange);
+  margin-right: 10px;
+ }
+
+ .selected{
+   background-color: var(--color-orange);
+ }

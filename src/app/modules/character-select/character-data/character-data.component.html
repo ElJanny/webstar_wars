@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Válassz két harcost az ellenkező oldalakból!</h1>
+  <div class="mini-container">
+    <div class="square"></div>  <div><span>oldal</span> {{character.side}}</div>
+  </div>
+  <div class="mini-container">
+    <div class="square-star"></div> <div><span>különleges erő</span> {{character.power}}</div>
+  </div>
+
+  <div class="name"> <h2 [innerHtml]="character.name"></h2></div>
+  <button mat-button (click)="selectCharacter()" [ngClass]="{'selected': alreadySelected}">Kiválasztom</button>
+  <div class="description">
+    <h3><div class="mini-square"></div>leírás</h3>
+    <p>{{character.description}}</p>
+  </div>
+</div>

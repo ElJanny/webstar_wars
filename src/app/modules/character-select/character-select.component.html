@@ -1,0 +1,12 @@
+<section>
+  <ng-container *ngIf="characters">
+
+  <app-header></app-header>
+  <div class="container">
+    <app-character-data [character]="selectedCharacter!" [alreadySelected]="alreadySelected" (selectChar)="selectSide($event)"></app-character-data>
+    <app-character-sweep [characters]="characters!" (selectCharacter)="selectChar($event)"></app-character-sweep>
+  </div>
+  </ng-container>
+  <button mat-button class="bottom-button" [ngClass]="{'invisible': !(selectedDark && selectedLight)}" (click)="startBattle()"> küzdelem szimulálása</button>
+
+</section>

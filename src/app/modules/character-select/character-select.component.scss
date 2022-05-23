@@ -1,0 +1,62 @@
+section{
+  background-image: url('./../../../assets/backgrounds/bg_2/bg_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5% 10% 0% 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+}
+
+@media (max-device-width: 800px) {
+  .container{
+    flex-direction: column-reverse !important;
+  }
+  app-character-data{
+
+    width: 100% !important;
+  }
+
+  app-character-sweep{
+   width: 100% !important;
+  }
+}
+
+.container{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding-top: 2.5%;
+  overflow-y: auto;
+}
+
+app-character-data{
+
+  width: 50%;
+}
+
+app-character-sweep{
+ width: 50%;
+}
+
+.bottom-button{
+  margin: auto;
+  width: 30%;
+  min-width: 20rem;
+  height: 5%;
+  min-height: 3rem;
+  font-size: 20px;
+  font-family: 'starjedi';
+  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(to right, var(--color-blue) , var(--color-red));
+}
+
+.invisible{
+  display: none;
+}

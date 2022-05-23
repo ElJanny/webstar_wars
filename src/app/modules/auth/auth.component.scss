@@ -8,6 +8,7 @@ section{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 @media (max-device-width: 600px) {
@@ -26,6 +27,44 @@ section{
   }
 }
 
+@media (max-device-height: 600px) {
+
+
+  h2{
+    margin-bottom: 2rem !important;
+  }
+  h1{
+    margin-bottom: 1rem !important;
+  }
+  form{
+    max-width: 75%;
+  }
+}
+
+
+@media (max-device-height: 300px) {
+
+
+  h2{
+    font-size: 25px !important;
+    margin:0 !important;
+
+  }
+  h1{
+    font-size: 15px !important;
+    margin:0 !important;
+  }
+  form{
+    max-width: 75%;
+  }
+
+  button{
+    margin-top: 0.125rem !important;
+    height: 2rem !important;
+  }
+}
+
+
 label{
   color: var(--color-white);
   text-align: center;
@@ -42,7 +81,7 @@ h1{
 
 h2{
   font-size: 70px;
-  font-family: 'SfDistant';
+  font-family: 'sfDistant';
   color: var(--color-white);
   margin-bottom: 7.5rem;
 }
@@ -72,22 +111,3 @@ form{
   width: 25rem;
 }
 
-@font-face {
-  font-family: 'SfDistant';
-  src: url('../../../assets/fonts/SfDistantGalaxyAltoutline-e2Bp.ttf');
-}
-
-@font-face {
-  font-family: 'starjedi';
-  src: url('../../../assets/fonts/Starjedi.ttf');
-}
-
-@font-face {
-  font-family: 'poppinsBold';
-  src: url('../../../assets/fonts/Poppins-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'poppinsRegular';
-  src: url('../../../assets/fonts/Poppins-Regular.ttf');
-}

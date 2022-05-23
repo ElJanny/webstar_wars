@@ -13,6 +13,8 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+@import './assets/fonts/fonts.scss';
+
 $fontConfig: (
   display-4: mat-typography-level(112px, 112px, 300, 'Roboto', -0.0134em),
   display-3: mat-typography-level(56px, 56px, 400, 'Roboto', -0.0089em),
@@ -248,6 +250,7 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 }
 
 
+
 :root{
   --color-black: #000000;
   --color-black-gray: #333333;
@@ -258,6 +261,7 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
   --color-blue: #00D2FF;
   --color-green: #2ECC71;
 }
-
+@import "~swiper/swiper-bundle.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; padding:0; overflow: hidden;}
+

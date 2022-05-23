@@ -1,3 +1,4 @@
+import { LocalStorageService } from './../local_storage/local-storage.service';
 import { AuthModel } from './../../model/auth.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ParentService } from './parent';
@@ -9,11 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class AuthService extends ParentService{
 
-  constructor(private http: HttpClient) {
-    super('/authentication/');
+  constructor(private http: HttpClient,
+              private localStorageService: LocalStorageService) {
+                super('/authentication/');
+              }
+
+   getAuthToken(): string | null {
+    let token = this.localStorageService.get("token");
+    return token;
    }
 
-   login(payload: {username: string, password: string}): Observable<AuthModel>{ //TODO
+   login(payload: {username: string, password: string}): Observable<AuthModel> {
       const options ={
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
@@ -23,5 +30,7 @@ export class AuthService extends ParentService{
       }
       return this.http.post<AuthModel>(this.fullPath, payload, options);
    }
+
+
 
 }
