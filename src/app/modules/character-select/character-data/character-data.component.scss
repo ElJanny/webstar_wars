@@ -99,3 +99,43 @@ p{
  .selected{
    background-color: var(--color-orange);
  }
+
+ @media (max-device-width: 800px) {
+    button{
+      width: 100%;
+      align-self: center;
+    }
+
+    h2{
+      width: 100%;
+      text-align: center;
+      font-size: 70px !important;
+    }
+
+    .container{
+      text-align: center;
+    }
+    p{
+      text-align: left;
+    }
+ }
+
+ @media (max-device-width: 600px) {
+  button{
+    width: 100%;
+    align-self: center;
+  }
+
+  h2{
+    width: 100%;
+    text-align: center;
+    font-size: 60px !important;
+  }
+
+  .container{
+    text-align: center;
+  }
+  p{
+    text-align: left;
+  }
+}

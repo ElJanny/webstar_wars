@@ -7,7 +7,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
   styleUrls: ['./character-data.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CharacterDataComponent implements OnInit, OnChanges {
+export class CharacterDataComponent implements OnInit {
 
   @Output() selectChar = new EventEmitter<CharacterModel>();
 
@@ -15,9 +15,7 @@ export class CharacterDataComponent implements OnInit, OnChanges {
   @Input() alreadySelected!: boolean;
   constructor() { }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.character);
-  }
+
 
   ngOnInit(): void {
   }

@@ -1,3 +1,4 @@
+import { SimulationService } from './../../core/service/api/simulation.service';
 import { Router } from '@angular/router';
 import { CharacterService } from './../../core/service/api/character.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -22,6 +23,7 @@ export class CharacterSelectComponent implements OnInit, OnDestroy {
   alreadySelected: boolean = false;
 
   constructor(private characterService: CharacterService,
+              private simulationService: SimulationService,
               private router: Router) { }
 
 
@@ -46,6 +48,17 @@ export class CharacterSelectComponent implements OnInit, OnDestroy {
   }
 
   startBattle(){
+    this.simulationService.allowSimulation(this.selectedDark.id, this.selectedLight.id)
+      .subscribe(
+        (data) =>{
+          console.log(data);
+        },
+        (error) =>{
+          console.log(error);
+        },
+        () => {
+          this.simulationService.setSelectedFighters(this.selectedLight,this.selectedDark);
+          this.router.navigate(['/simulation']);})
 
   }
 

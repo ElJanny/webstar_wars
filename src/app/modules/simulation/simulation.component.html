@@ -1,0 +1,17 @@
+<section>
+  <app-header></app-header>
+  <div class="text">
+    <h1>{{headerText}}</h1>
+  </div>
+  <div class="column-container">
+    <div class="side-column" [ngClass]="{ 'winner-left': winnerNumber==1}">
+      <app-fighter [healthPoint]="darkFighterHealth" [fighter]="darkFighter" [isWinner]="winnerNumber==1" [side]="true" [ngClass]="{'invisible': winnerNumber==0}"></app-fighter>
+    </div>
+    <div class="middle-column" >
+      <span [ngClass]="{'invisible': winnerNumber!=2}">vs</span>
+    </div>
+    <div class="side-column" [ngClass]="{ 'winner-right': winnerNumber==0}">
+      <app-fighter [healthPoint]="lightFighterHealth" [fighter]="lightFighter" [isWinner]="winnerNumber==0" [side]="false" [ngClass]="{'invisible': winnerNumber==1}"></app-fighter>
+    </div>
+  </div>
+</section>

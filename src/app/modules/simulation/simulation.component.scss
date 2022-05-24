@@ -1,0 +1,103 @@
+section{
+  background-image: url('./../../../assets/backgrounds/bg_3/bg_3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5% 10% 0% 10%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+h1{
+  font-family: 'starjedi';
+  font-size: 60px;
+  align-self: center;
+  margin-top: 2.5%;
+}
+
+.text{
+height: 20%;
+width: 100%;
+text-align: center;
+
+}
+
+.column-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+.side-column{
+  flex: 40%;
+  max-width: 40%;
+  height: 100%;
+}
+
+.middle-column{
+  flex: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  span{
+    text-align: center;
+    font-family: 'SfDistant';
+    font-size: 150px;
+  }
+}
+
+.invisible{
+  display: none;
+}
+
+.winner-left{
+  animation: move-left-to-center 3s linear;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move-left-to-center {
+  0%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(75%);
+  }
+}
+@keyframes move-left-to-center {
+  0%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(75%);
+  }
+}
+
+
+.winner-right{
+  animation: move-right-to-center 3s linear;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move-right-to-center {
+  0%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+@keyframes move-right-to-center {
+  0%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
