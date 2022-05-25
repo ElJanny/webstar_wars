@@ -13,7 +13,7 @@ SwiperCore.use([Virtual, Pagination]);
   styleUrls: ['./character-sweep.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CharacterSweepComponent implements OnInit, AfterViewInit {
+export class CharacterSweepComponent implements OnInit {
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   @Input() characters!: CharacterModel[];
@@ -35,13 +35,9 @@ export class CharacterSweepComponent implements OnInit, AfterViewInit {
 
   constructor(){}
 
-  ngAfterViewInit(): void {
-
-  }
   ngOnInit(): void {
     this.selectedIndex=0;
   }
-
 
   slideNext(){
     this.swiper!.swiperRef.slideNext(100);
