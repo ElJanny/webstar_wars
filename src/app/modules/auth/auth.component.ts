@@ -33,9 +33,13 @@ export class AuthComponent implements OnDestroy {
           this.localStorageService.set("userData",JSON.stringify(data));
         },
         (error) => {
-          console.log(error);
+          this.handleError(error.status);
         },
         () => {this.router.navigate(["/charSelect"])});
+  }
+
+  handleError(status: number){
+
   }
 
   ngOnDestroy(): void {
