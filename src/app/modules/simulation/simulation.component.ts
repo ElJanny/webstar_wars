@@ -10,7 +10,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class SimulationComponent implements OnInit {
 
-  headerText: string = "A tudás legyen veled"
+  headerText: string = "A tudás legyen veled!"
 
   lightFighter!: CharacterModel;
   darkFighter!: CharacterModel;

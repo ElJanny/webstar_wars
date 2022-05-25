@@ -5,7 +5,7 @@ section{
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 0.5% 10% 0% 10%;
+  padding: 0.5% 5% 0% 5%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -13,7 +13,7 @@ section{
 
 }
 
-@media (max-device-width: 800px) {
+@media (max-width: 800px) {
 
   section{
     padding: 0.5% 1% 0% 1%;
@@ -54,6 +54,12 @@ section{
   box-sizing: border-box;
   padding-top: 2.5%;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 app-character-data{
@@ -68,6 +74,7 @@ app-character-sweep{
 .bottom-button{
   margin: auto;
   width: 30%;
+  position: absolute;
   min-width: 20rem;
   height: 5%;
   min-height: 3rem;
@@ -75,6 +82,10 @@ app-character-sweep{
   font-family: 'starjedi';
   border-radius: 10px 10px 0 0;
   background-image: linear-gradient(to right, var(--color-blue) , var(--color-red));
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .invisible{

@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Válassz két harcost az ellenkező oldalakból!</h1>
   <div class="mini-container">
-    <div class="square"></div>  <div><span>oldal</span> {{character.side}}</div>
+    <div class="square"></div>  <div><span>oldal</span> {{character.side == "DARK" ? "Sötét" : "Világos"}}</div>
   </div>
   <div class="mini-container">
     <div class="square-star"></div> <div><span>különleges erő</span> {{character.power}}</div>
@@ -13,4 +13,5 @@
     <h3><div class="mini-square"></div>leírás</h3>
     <p>{{character.description}}</p>
   </div>
+
 </div>

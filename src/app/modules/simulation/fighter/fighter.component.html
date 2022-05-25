@@ -3,17 +3,14 @@
     <h1 [ngClass]="{'left-side': side, 'right-side': !side}"> {{sideText}} </h1>
   </div>
   <div class="image">
-
     <div class="circle" [ngClass]="{'circle-left': side, 'circle-right': !side, 'center-absolute': isWinner}"></div>
-      <img [src]="'./../../../assets/characters/'+fighter.id+'/'+fighter.id+'.png'" alt="" [ngClass]="{'left-image': side}">
-
-
+    <img [src]="'./../../../assets/characters/'+fighter.id+'/'+fighter.id+'.png'" alt="" [ngClass]="{'left-image': side}">
   </div>
   <div class="datas">
     <h2>{{name}}</h2>
     <div class="health full-health" [ngClass]="{'left-side': side, 'right-side': !side, 'invisible': isWinner}">
       <div class="health current-health" [ngClass]="{'current-health-left': side, 'current-health-right': !side}" [ngStyle]="{'width': healthPoint+'%'}"> <span>{{healthPoint}}%</span></div>
     </div>
-    <button  mat-raised-button color="primary" [ngClass]="{'invisible': !isWinner}" (click)="backToCharacterSelect()"> Vissza a fedélzetre </button>
+    <button  mat-raised-button color="primary" [ngClass]="{'invisible': !isWinner, 'appear-anim': isWinner}" (click)="backToCharacterSelect()"> Vissza a fedélzetre </button>
   </div>
 </div>

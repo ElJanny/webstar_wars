@@ -12,8 +12,9 @@ h1{
 
 img{
  height: 100%;
- z-index: 10;
- position:relative;
+ aspect-ratio: 1/1;
+ z-index: 2;
+ position: relative;
 }
 
 .side{
@@ -76,16 +77,15 @@ span{
 }
 
 .image{
-  width: 100%;
-  height: 60%;
+  height: 50%;
   position: relative;
-  z-index: 100;
 }
 
 .circle{
   z-index: 0;
-  width:17rem;
-  height: 17rem;
+  width:50%;
+
+  aspect-ratio: 1/1;
   border-radius: 100%;
   position: absolute;
   top:50%;
@@ -108,6 +108,9 @@ span{
 }
 
 .center{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -124,6 +127,7 @@ span{
 
 button{
   width: 50%;
+  min-width: 12rem;
   height: 3rem;
   font-family: 'poppinsBold';
   font-size: 16px;
@@ -133,4 +137,134 @@ button{
 
 .datas{
   margin-top:5%;
+}
+
+
+.appear-anim{
+  animation: appear 3s linear;
+}
+
+@-webkit-keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 950px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .right-side{
+    text-align: center;
+  }
+
+  .left-side{
+    text-align: center;
+  }
+
+  .circle{
+    top:25%;
+    transform: translate(0,-50%);
+  }
+
+  h1{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+  }
+
+  .datas{
+    width: 80%;
+    margin-top: 5%;
+  }
+  img{
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+  }
+  .image{
+    text-align: center;
+    width: 50%;
+  }
+  .circle-left{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .circle-right{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .side{
+    padding: none;
+  }
+  span{
+    font-size: 16px;
+    bottom: -1.25rem;
+  }
+
+}
+
+@media (max-width: 600px){
+  h1{
+    font-size: 16px;
+   }
+  img{
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+  }
+  .image{
+    text-align: center;
+    width: 60%;
+  }
+  h2{
+    font-size: 16px;
+    margin-top: 0.2rem;
+  }
+  .health{
+    width: 100%;
+    height: 0.5rem;
+
+    span{
+      font-size: 12px !important;
+      bottom: -1.25rem;
+    }
+  }
+
+   .datas{
+     margin-top:0%;
+   }
+}
+
+@media (max-height: 700px){
+ .image{
+   height: 50%;
+ }
 }
